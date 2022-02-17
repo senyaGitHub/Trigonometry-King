@@ -11,7 +11,8 @@ def costosin(n):
 	sinus = sqrt(1-n**2)
 	return(sinus)
 
-def tantocosandsin(n):
+
+def tantocos(n):
 	cossin = (sqrt(1/(1+n**2)))
 	return(cossin)
 
@@ -39,13 +40,14 @@ while True:
 
 	elif choose == '2' :
 		x = float(input())
-		print('| Cos: ', x, '|')
 		print('| Sin: ', costosin(x), '|')
+		print('| Cos: ', x, '|')
 		print('| Tg: ', costosin(x)/(x),'|')
 	elif choose == '3':
 		x = float(input())
+		print('| Sin: ',sqrt(1-(tantocos(x)**2)))
+		print('| Cos:', tantocos(x), '|')	
 		print('| Tg: ',x,'|')
-		print('| Cos:', tantocosandsin(x), '|')	
 	elif choose == 'exit':
 		break
 	else:
