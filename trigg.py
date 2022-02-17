@@ -14,17 +14,17 @@ def costosin(n):
 
 def tantocos(n):
 	cossin = (sqrt(1/(1+n**2)))
-	return(cossin)
+	return(cossin) 
 
 
-while True:
+while True: 
   
-	choose = str(input(''' 
+	choose = str(input('''
 [1] - Синус
 [2] - Косинус
 [3] - Тангенс
 [exit] - Выход
-: '''))
+: '''))# 'Эта часть кода отвечает за вопрос и вывод информатии'
 	
 
 
@@ -52,3 +52,20 @@ while True:
 		break
 	else:
 		print("Ошибка выбора")
+
+
+
+
+
+ch = input(''' 
+В каком формате данные?
+[1]
+[2]
+[3] ''')
+
+if  ch == '1': # для выбора из градусов радианов и значений
+	pass
+
+
+
+
