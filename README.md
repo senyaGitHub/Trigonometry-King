@@ -1,6 +1,6 @@
 # Trigonometry-King
 ## Basic math solver
-
+i will keep this project to see how i improved 
 
 
 ![Alt-текст](https://github.com/Detectivevincent/Trigonometry-King/blob/eaf5fa5a3c17a6b5bf3f2d41b9ce31d4cb7fde50/diagram(1).png "program map")
