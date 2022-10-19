@@ -10,47 +10,46 @@ def mathematics(choose, x):
 		cos = sqrt(1-n**2)
 		return(cos)
 
-
 	def Si(n):
 		sin = sqrt(1-n**2)
 		return(sin)
-
 
 	def Tg(n):
 		tg = (sqrt(1/(1+n**2)))
 		return(tg) 
 
-
-		
 	if choose == "sin":
 		if Co(x) == 0:
 			sin = x
 			cos = Co(x)
-			return [sin, cos]
+			tg = 'None'
+			return sin, cos, tg
 		else:
 			sin = x
 			cos = Co(x)
 			tg = x/Co(x)
-			return [sin,cos,tg]
+			return sin,cos,tg
 
-	elif choose == "cos" :
+	if choose == "cos":
 		sin =  Si(x)
 		cos = x
 		tg = Si(x)/(x)
-		return [sin,cos,tg]
-	elif choose == "tg":
+		return sin,cos,tg
+	
+	if choose == "tg":
 		sin = Si(Tg(x))
 		cos = Tg(x)
 		tg = x
-		return [sin,cos,tg]
+		return sin,cos,tg
 
 
 
 
 def clicked():
 	result = []
-	result = mathematics(combox.get(), txt.get())
-	print(txt.get())
+	result = list(result)
+	result = round(list(mathematics(combox.get(), float(txt.get()))), 2)
+	lbl.config(text = f"Sin: {result[0]} Cos: {result[1]}, Tg: {result[2]}")
 	print(result)	
 	
 
@@ -58,29 +57,21 @@ def clicked():
 
 
 
-
-
-
-
-
-
-
-
 window = Tk()
-window.geometry("300x100")
+window.geometry("400x100")
 window.grid()
-window.resizable(0,0)
+#window.resizable(0,0)
 
 strg = 'something'
 
 combox = ttk.Combobox(text=strg)
-combox['values'] = ('Sin','Con','Tg')
+combox['values'] = ('sin','cos','tg')
 
 combox.state(["readonly"])
 combox.grid(column=1, row=0)
 
 
-lbl = Label(window, text="Number")
+lbl = Label(window, text="Number between 0 and 1")
 lbl.grid(column=0, row=3)
 
 
